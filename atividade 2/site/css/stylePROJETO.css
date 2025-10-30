@@ -1,0 +1,238 @@
+/* ======= GERAL ======= */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f5f9ff;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  background-color: #003d7e;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+
+nav {
+  background-color: #0056b3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+
+nav a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: #003d80;
+  transition: 0.5s;
+  font-size: 19px;
+}
+
+nav a.active {
+  background-color: #004a99;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  transform: scale(1.05);
+}
+
+.imagem-logo {
+  width: 100px;
+  height: auto;
+  margin-top: 5px;
+}
+
+/* ======= SEÇÕES ======= */
+main h2 {
+  text-align: center;
+  color: #0d47a1;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* ======= FORMULÁRIO DE FILTRO ======= */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.filter-form label {
+  font-weight: 600;
+  color: #1565c0;
+}
+
+.filter-form select,
+.filter-form input {
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 1rem;
+}
+
+.filter-form .btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-form .btn:hover {
+  background-color: #0d47a1;
+}
+
+/* ======= GRID DE CARDS ======= */
+.projects-list,
+.materias-grid,
+.metodos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 60px;
+}
+
+/* ======= CARD ======= */
+.project-item article,
+.materia-card,
+.metodo-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item article:hover,
+.materia-card:hover,
+.metodo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ======= CONTEÚDO DOS CARDS ======= */
+.project-item h3,
+.materia-card h3,
+.metodo-card h3 {
+  margin-top: 0;
+  color: #1976d2;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.project-item p,
+.materia-card p,
+.metodo-card p {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-item figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #1565c0;
+}
+
+/* ======= BOTÕES ======= */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #0d47a1;
+}
+
+.btn.outline {
+  background: none;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+.btn.outline:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* ======= RODAPÉ ======= */
+.site-footer {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.site-footer a {
+  color: #bbdefb;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+/*FADE*/
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ao aparecer na tela fica visivel */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

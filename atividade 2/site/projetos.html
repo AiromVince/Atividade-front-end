@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/stylePROJETO.css">
+  <title>TECEnsino - Projetos e Educação</title>
+
+  <style>
+    /* ===== ESTILO DO MODAL DE CONTATO ===== */
+    .modal-contato {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal-conteudo {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-conteudo h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .modal-conteudo form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-conteudo input,
+    .modal-conteudo textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .modal-conteudo button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .modal-conteudo button:hover {
+      background-color: #005fa3;
+    }
+
+    .fechar-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="container">
+      <img src="./imagens/logo.png" class="imagem-logo">
+      <h1>TECEnsino</h1>
+        <nav>
+          <a href="./index.html">inicio</a>
+          <a href="./projetos.html" class="active">PROJETO</a>
+          <a href="./cadastro.html">cadastro</a>
+        </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+
+    <!-- FILTRO DE PROJETOS -->
+    <section id="voluntariado" aria-labelledby="filtro-titulo" class="reveal">
+      <h2 id="filtro-titulo">Oportunidades de Voluntariado</h2>
+
+      <form class="filter-form" aria-label="Filtrar projetos" id="filterForm">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+          <option value="">Todas</option>
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="sustentabilidade">Sustentabilidade</option>
+        </select>
+
+        <label for="search">Pesquisar:</label>
+        <input id="search" name="search" type="search" placeholder="Palavra-chave">
+
+        <button class="btn" type="button" id="applyFilter">Aplicar</button>
+      </form>
+    </section>
+
+    <!-- LISTA DE PROJETOS -->
+    <section id="projetos" aria-labelledby="projetos-titulo" class="reveal">
+      <h2 id="projetos-titulo">Projetos Ativos</h2>
+
+      <ul class="projects-list" id="projectsList">
+        <!-- Projeto exemplo -->
+        <li class="project-item">
+          <article>
+            <h3>Projeto Alfabetiza+</h3>
+            <p class="meta">Categoria: Educação — Local: Zona Norte SP</p>
+            <figure>
+              <img src="./imagens/criancas-criancas-aprendendo-na-aula-de-ciencias-de-laboratorio-escolar-ilustracao-de-elemento-de-design-grafico_385073-711.jpg" alt="Crianças em sala de aula" width="450" height="450">
+              <figcaption>Atividades de alfabetização para crianças.</figcaption>
+            </figure>
+            <p>Iniciativa voltada à alfabetização infantil por meio de jogos, leitura, peças e debates simples.</p>
+            <p>
+              <a class="btn" href="/projetos.html#">Saiba mais</a>
+              <a class="btn outline" href="./cadastro.html">Me voluntariar</a>
+            </p>
+          </article>
+        </li>
+
+        <li class="project-item">
+          <article>
+            <h3>Conecta Jovem</h3>
+            <p class="meta">Categoria: Tecnologia — Local: Zona Leste SP</p>
+            <figure>
+              <img src="./imagens/Creatividad-1174517163-890x560.jpg" alt="Jovens aprendendo programação" width="450" height="450">
+              <figcaption>Oficinas de iniciação tecnológica.</figcaption>
+            </figure>
+            <p>Capacitação de jovens em ferramentas digitais e pensamento computacional abrangendo tambem redes sociais.</p>
+            <p>
+              <a class="btn" href="#">Saiba mais</a>
+              <a class="btn outline" href="./cadastro.html">Me voluntariar</a>
+            </p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MATÉRIAS -->
+    <section id="materias" aria-labelledby="materias-titulo" class="reveal">
+      <h2 id="materias-titulo">Matérias e Áreas de Estudo</h2>
+
+      <div class="materias-grid">
+        <article class="materia-card">
+          <h3>Tecnologia e Inovação</h3>
+          <p>Programação, robótica e pensamento lógico aplicados ao cotidiano.</p>
+        </article>
+
+        <article class="materia-card">
+          <h3>Ciências Humanas</h3>
+          <p>Desenvolvimento social, cidadania e empatia como base de formação.</p>
+        </article>
+
+        <article class="materia-card">
+          <h3>Educação Ambiental</h3>
+          <p>Projetos sustentáveis e práticos que conectam alunos à preservação e à consciência ecológica.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MÉTODOS DE ENSINO -->
+    <section id="metodos" aria-labelledby="metodos-titulo" class="reveal">
+      <h2 id="metodos-titulo">Métodos de Ensino</h2>
+
+      <div class="metodos-list">
+        <article class="metodo-card">
+          <h3>Aprendizado Prático</h3>
+          <p>Ensinamos por meio da experiência, priorizando atividades que estimulam a criatividade e a autonomia.</p>
+        </article>
+
+        <article class="metodo-card">
+          <h3>Avaliação Individual</h3>
+          <p>Cada aluno é acompanhado de forma personalizada, considerando seu ritmo e potencial.</p>
+        </article>
+
+        <article class="metodo-card">
+          <h3>Projetos Colaborativos</h3>
+          <p>O trabalho em equipe é incentivado para fortalecer a comunicação e o senso de comunidade.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo" class="reveal">
+    <div class="container">
+      <p>Quer conhecer mais sobre a TECEnsino? <a href="#contato" id="abrirContato">Entre em contato</a>.</p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL DE CONTATO ADICIONADO ===== -->
+  <div class="modal-contato" id="modalContato">
+    <div class="modal-conteudo">
+      <span class="fechar-modal" id="fecharModal">&times;</span>
+      <h2>Entre em Contato</h2>
+      <form id="formContato">
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/scripts.js" defer></script>
+
+  <!-- SCRIPT DE ABRIR/FECHAR MODAL -->
+  <script>
+    const abrirBtn = document.getElementById("abrirContato");
+    const modal = document.getElementById("modalContato");
+    const fecharBtn = document.getElementById("fecharModal");
+
+    abrirBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+
+    fecharBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    document.getElementById("formContato").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Mensagem enviada com sucesso! ✅, aguarde uma resposta por email.");
+      modal.style.display = "none";
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

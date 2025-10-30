@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONG Exemplo — projetos sociais e voluntariado">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>TecEnsino | Início</title>
+</head>
+
+<body>
+  <header>
+    <img src="./imagens/logo.png" class="imagem-logo" alt="Voluntários trabalhando em comunidade">
+    <h1>TecEnsino</h1>
+    <nav>
+      <a href="./index.html" class="active">INÍCIO</a>
+      <a href="./projetos.html">PROJETOS</a>
+      <a href="./cadastro.html">CADASTRO</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- introdução -->
+    <section aria-labelledby="intro-title" class="intro reveal">
+      <h2 id="intro-title" class="reveal">Transformando vidas por meio da educação e solidariedade</h2>
+      <p>Conheça nossos projetos, participe como voluntário ou contribua com doações. 
+        Trabalhamos com transparência e resultados que geram impacto real.</p>
+      <figure>
+        <figcaption class="reveal">Voluntários em ação — Projeto comunitário TECEnsino.</figcaption>
+      </figure>
+    </section>
+
+    <!-- sobre -->
+    <section class="about reveal" aria-labelledby="about-title">
+      <h3 id="about-title reveal">Missão, Visão e Valores</h3>
+
+      <article class="reveal">
+        <h4>Missão</h4>
+        <p>Promover uma educação prática e personalizada, valorizando o potencial individual de cada aluno. 
+          O projeto nasce como resposta às falhas do sistema educacional tradicional, que limita a criatividade 
+          e o desenvolvimento específico dos jovens. Na TECEnsino, acreditamos em experiências reais, avaliações 
+          personalizadas e aprendizado significativo. Sem depender de colocar alunos em caixas de horários e prazos
+          que não ensinam o aluno a aprender, e sim a decorar.</p>
+      </article>
+
+      <article class="reveal">
+        <h4>Visão</h4>
+        <p>Ser reconhecida como referência regional em iniciativas educacionais sustentáveis que unem tecnologia, 
+          inovação e impacto social.</p>
+      </article>
+
+      <article class="reveal">
+        <h4>Valores</h4>
+        <ul>
+          <li>Transparência</li>
+          <li>Respeito e inclusão</li>
+          <li>Inovação e criatividade</li>
+          <li>Compromisso com resultados reais</li>
+          <li>Olhar para o aluno além do rótulo do ensino tradicional</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- métricas -->
+    <section class="metrics reveal" aria-labelledby="metrics-title">
+      <h3 id="metrics-title">Nossos Resultados</h3>
+      <ul class="metrics-list">
+        <li>
+          <strong>120+</strong>
+          <span>Projetos realizados</span>
+        </li>
+        <li>
+          <strong>3.200+</strong>
+          <span>Voluntários ativos</span>
+        </li>
+        <li>
+          <strong>R$ 15 mi+</strong>
+          <span>Em recursos arrecadados</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- área de doação -->
+    <section class="donation reveal" aria-labelledby="donation-title">
+      <h3 id="donation-title">Faça Parte Dessa Mudança</h3>
+      <p>Sua contribuição ajuda a transformar o futuro de milhares de jovens.  
+        Escolha o valor e ajude nossa missão educacional.</p>
+
+      <form class="donation-form">
+        <label for="valor">Valor da doação (R$):</label>
+        <input type="number" id="valor" name="valor" min="5" placeholder="Ex: 50" required>
+
+        <label for="metodo">Método de pagamento:</label>
+        <select id="metodo" name="metodo" required>
+          <option value="">Selecione</option>
+          <option value="pix">PIX</option>
+          <option value="cartao">Cartão de crédito</option>
+          <option value="boleto">Boleto bancário</option>
+        </select>
+
+        <button type="submit">Doar Agora</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contato" class="site-footer" role="contentinfo">
+    <div class="container">
+      <section aria-labelledby="footer-about">
+        <h4 id="footer-about">Contato</h4>
+        <address>
+          <p>Rua Bertolano Chico Silva, 478 — Salgueiro — São Paulo/SP</p>
+          <p>Telefone: <a href="tel:+5511999999999">(16) 9365-6387</a></p>
+          <p>E-mail: <a href="mailto:contato@ongexemplo.org">@ongexemplo.org</a></p>
+        </address>
+      </section>
+      <p class="copyright">© <span id="year"></span> TecEnsino — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+  <script src="./js/scripts.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

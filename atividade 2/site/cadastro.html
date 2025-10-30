@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./css/styleCADASTRO.css">
+</head>
+<body>
+
+<header>
+  <img src="./imagens/logo.png" class="imagem-logo">
+  <h1>TecEnsino</h1>
+  <nav>
+    <a href="./index.html">Início</a>
+    <a href="./projetos.html">Projetos</a>
+    <a href="./cadastro.html" class="active">CADASTRO</a>
+  </nav>
+</header>
+
+<main>
+  <form id="cadastroForm">
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+
+      <label for="nome">Nome completo</label>
+      <input id="nome" name="nome" type="text" required placeholder="Digite seu nome completo" autocomplete="name">
+
+      <label for="cpf">CPF</label>
+      <input id="cpf" name="cpf" type="text" required placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required placeholder="exemplo@dominio.com" autocomplete="email">
+
+      <label for="telefone">Número de telefone</label>
+      <input id="telefone" name="telefone" type="tel" required placeholder="(00) 00000-0000" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" autocomplete="tel">
+
+      <label for="nascimento">Data de nascimento</label>
+      <input id="nascimento" name="nascimento" type="date" required max="2007-12-31">
+    </fieldset>
+
+    <fieldset>
+      <legend>Endereço</legend>
+
+      <label for="endereco">Endereço</label>
+      <input id="endereco" name="endereco" type="text" required autocomplete="street-address">
+
+      <label for="cep">CEP</label>
+      <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" required pattern="\d{5}-\d{3}">
+
+      <label for="cidade">Cidade</label>
+      <input id="cidade" name="cidade" type="text" required>
+
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione</option>
+        <option value="AC">Acre (AC)</option>
+        <option value="AL">Alagoas (AL)</option>
+        <option value="AP">Amapá (AP)</option>
+        <option value="AM">Amazonas (AM)</option>
+        <option value="BA">Bahia (BA)</option>
+        <option value="CE">Ceará (CE)</option>
+        <option value="DF">Distrito Federal (DF)</option>
+        <option value="ES">Espírito Santo (ES)</option>
+        <option value="GO">Goiás (GO)</option>
+        <option value="MA">Maranhão (MA)</option>
+        <option value="MT">Mato Grosso (MT)</option>
+        <option value="MS">Mato Grosso do Sul (MS)</option>
+        <option value="MG">Minas Gerais (MG)</option>
+        <option value="PA">Pará (PA)</option>
+        <option value="PB">Paraíba (PB)</option>
+        <option value="PR">Paraná (PR)</option>
+        <option value="PE">Pernambuco (PE)</option>
+        <option value="PI">Piauí (PI)</option>
+        <option value="RJ">Rio de Janeiro (RJ)</option>
+        <option value="RN">Rio Grande do Norte (RN)</option>
+        <option value="RS">Rio Grande do Sul (RS)</option>
+        <option value="RO">Rondônia (RO)</option>
+        <option value="RR">Roraima (RR)</option>
+        <option value="SC">Santa Catarina (SC)</option>
+        <option value="SP">São Paulo (SP)</option>
+        <option value="SE">Sergipe (SE)</option>
+        <option value="TO">Tocantins (TO)</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferências</legend>
+      
+      <label for="interesse">Interesse principal</label>
+      <select id="interesse" name="interesse">
+        <option value="voluntariado">Voluntariado</option>
+        <option value="doacao">Doação</option>
+        <option value="parceria">Parceria</option>
+      </select>
+    </fieldset>
+
+    <p class="form-actions">
+      <button class="btn" type="submit">Enviar cadastro</button>
+      <button class="btn outline" type="reset">Limpar</button>
+    </p>
+  </form>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>Obrigado por apoiar.</p>
+  </div>
+</footer>
+
+<script src="./js/scripts.js" defer></script>
+</body>
+</html>
