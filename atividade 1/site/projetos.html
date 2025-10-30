@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/">
+  <title>TECEnsino - Projetos e Educação</title>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1>TECEnsino</h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="./index.html">inicio</a></li>
+          <li><a href="./cadastro.html">cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+
+    <!-- FILTRO DE PROJETOS -->
+    <section id="voluntariado" aria-labelledby="filtro-titulo">
+      <h2 id="filtro-titulo">Oportunidades de Voluntariado</h2>
+
+      <form class="filter-form" aria-label="Filtrar projetos" id="filterForm">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+          <option value="">Todas</option>
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="sustentabilidade">Sustentabilidade</option>
+        </select>
+
+        <label for="search">Pesquisar:</label>
+        <input id="search" name="search" type="search" placeholder="Palavra-chave">
+
+        <button class="btn" type="button" id="applyFilter">Aplicar</button>
+      </form>
+    </section>
+
+    <!-- LISTA DE PROJETOS -->
+    <section id="projetos" aria-labelledby="projetos-titulo">
+      <h2 id="projetos-titulo">Projetos Ativos</h2>
+
+      <ul class="projects-list" id="projectsList">
+        <!-- Projeto exemplo -->
+        <li class="project-item">
+          <article>
+            <h3>Projeto Alfabetiza+</h3>
+            <p class="meta">Categoria: Educação — Local: Zona Norte</p>
+            <figure>
+              <img src="./imagens/criancas-criancas-aprendendo-na-aula-de-ciencias-de-laboratorio-escolar-ilustracao-de-elemento-de-design-grafico_385073-711.jpg" alt="Crianças em sala de aula" width="800" height="450">
+              <figcaption>Atividades de alfabetização para crianças.</figcaption>
+            </figure>
+            <p>Iniciativa voltada à alfabetização infantil por meio de jogos, leitura, peças e debates simples.</p>
+            <p>
+              <a class="btn" href="/projetos.html#">Saiba mais</a>
+              <a class="btn outline" href="/cadastro.html">Me voluntariar</a>
+            </p>
+          </article>
+        </li>
+
+        <li class="project-item">
+          <article>
+            <h3>Conecta Jovem</h3>
+            <p class="meta">Categoria: Tecnologia — Local: Zona Leste</p>
+            <figure>
+              <img src="./imagens/Creatividad-1174517163-890x560.jpg" alt="Jovens aprendendo programação" width="800" height="450">
+              <figcaption>Oficinas de iniciação tecnológica.</figcaption>
+            </figure>
+            <p>Capacitação de jovens em ferramentas digitais e pensamento computacional abrangendo tambem redes sociais.</p>
+            <p>
+              <a class="btn" href="#">Saiba mais</a>
+              <a class="btn outline" href="#">Me voluntariar</a>
+            </p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MATÉRIAS -->
+    <section id="materias" aria-labelledby="materias-titulo">
+      <h2 id="materias-titulo">Matérias e Áreas de Estudo</h2>
+
+      <div class="materias-grid">
+        <article class="materia-card">
+          <h3>Tecnologia e Inovação</h3>
+          <p>Programação, robótica e pensamento lógico aplicados ao cotidiano.</p>
+        </article>
+
+        <article class="materia-card">
+          <h3>Ciências Humanas</h3>
+          <p>Desenvolvimento social, cidadania e empatia como base de formação.</p>
+        </article>
+
+        <article class="materia-card">
+          <h3>Educação Ambiental</h3>
+          <p>Projetos sustentáveis e práticos que conectam alunos à preservação e à consciência ecológica.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MÉTODOS DE ENSINO -->
+    <section id="metodos" aria-labelledby="metodos-titulo">
+      <h2 id="metodos-titulo">Métodos de Ensino</h2>
+
+      <div class="metodos-list">
+        <article class="metodo-card">
+          <h3>Aprendizado Prático</h3>
+          <p>Ensinamos por meio da experiência, priorizando atividades que estimulam a criatividade e a autonomia.</p>
+        </article>
+
+        <article class="metodo-card">
+          <h3>Avaliação Individual</h3>
+          <p>Cada aluno é acompanhado de forma personalizada, considerando seu ritmo e potencial.</p>
+        </article>
+
+        <article class="metodo-card">
+          <h3>Projetos Colaborativos</h3>
+          <p>O trabalho em equipe é incentivado para fortalecer a comunicação e o senso de comunidade.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Quer conhecer mais sobre a TECEnsino? <a href="#contato">Entre em contato</a>.</p>
+    </div>
+  </footer>
+
+  <script src="./scripts.js" defer></script>
+</body>
+</html>

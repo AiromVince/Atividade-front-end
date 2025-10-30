@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>TecEnsino</h1>
+<nav>
+  <a href="./index.html">inicio</a>
+  <a href="./projetos.html">projeto</a>
+</nav>
+</header>
+
+<main>
+  <form id="cadastroForm">
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+
+      <label for="nascimento">Data de nascimento</label>
+      <input id="nascimento" name="nascimento" type="date" required max="2007-12-31">
+    </fieldset>
+
+    <fieldset>
+      <legend>Endereço</legend>
+
+      <label for="endereco">Endereço</label>
+      <input id="endereco" name="endereco" type="text" required autocomplete="street-address">
+
+      <label for="cep">CEP</label>
+      <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" required pattern="\d{5}-\d{3}">
+
+      <label for="cidade">Cidade</label>
+      <input id="cidade" name="cidade" type="text" required>
+
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione</option>
+        <option value="SP">SP</option>
+        <option value="RJ">RJ</option>
+        <option value="MG">MG</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferências</legend>
+      
+      <label for="interesse">Interesse principal</label>
+      <select id="interesse" name="interesse">
+        <option value="voluntariado">Voluntariado</option>
+        <option value="doacao">Doação</option>
+        <option value="parceria">Parceria</option>
+      </select>
+    </fieldset>
+
+    <p class="form-actions">
+      <button class="btn" type="submit">Enviar cadastro</button>
+      <button class="btn outline" type="reset">Limpar</button>
+    </p>
+  </form>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>Obrigado por apoiar.</p>
+  </div>
+</footer>
+
+<script src="./scripts.js" defer></script>
+</body>
+</html>
